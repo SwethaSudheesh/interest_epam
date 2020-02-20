@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.*;
 import com.epam.interest.*;
 public class Constructioncost extends App {
-public static void costcalculation() {
+public static int costcalculation() {
 Scanner ob = new Scanner(System.in);
 int a[]= {1200,1500,1800,2500};
 PrintStream pout=new PrintStream(System.out);  
@@ -18,9 +18,7 @@ pout.println("2. Above standard materials");
 pout.println("3. High standard material");
 pout.println("4. High standard material and fully automated house");
 int ch = ob.nextInt();
-
-pout.println("Total construction cost : " +area*a[ch-1]);
-pout.flush();
 ob.close();
+  return area*a[ch-1];
 }
 }
