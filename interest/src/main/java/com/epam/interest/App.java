@@ -1,14 +1,16 @@
 package com.epam.interest;
 import java.util.Scanner;
 import compoundinterest.Compoundinterest;
+import constructioncost.Constructioncost;
 import simpleinterest.Simpleinterest;
 public class App {
 public static void main(String[] args)
 {
 	Scanner ob=new Scanner(System.in);
      System.out.println("Calculate Simple intrest and Compound interest ");
-     System.out.println("1.Simple intrest");
-     System.out.println("2.Compound intrest");
+     System.out.println("1. Simple intrest");
+     System.out.println("2. Compound intrest");
+     System.out.println("3. Construction Cost");
      System.out.println("Select the option");
      int ch = ob.nextInt();
       System.out.println();
@@ -20,5 +22,10 @@ public static void main(String[] args)
      {
        Compoundinterest.compoundinterestcalculation();
      }
+       if(ch==3)
+       {
+         Constructioncost.costcalculation();
+       }
+       ob.close();
 }
 }
